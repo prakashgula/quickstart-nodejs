@@ -33,32 +33,35 @@ jobs:
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
       - test: npm test
-  dev:
-    requires: [~commit]
-    steps:
-      - install: npm install
-      - test: npm test
-  qa:
-    requires: [~commit]
-    steps:
-      - install: npm install
-      - test: npm test
-  betaskope:
-    requires: [~commit]
-    steps:
-      - install: npm install
-      - test: npm test
-  prod:
-      requires: [~commit]
-      steps:
-        - install: npm install
-        - test: npm test
-        requires: [~commit]
-    dc1:
-      requires: [~commit]
-      steps:
-        - install: npm install
-        - test: npm test
+    dev:
+      jenkins:
+        host: http://jenkins02.betaskope.local
+        port: 8080
+        username: pgula
+        password: Netskope@2141
+
+  # dev:
+  #   requires: [~commit]
+  #   steps:
+  #     - install: npm install
+  #     - test: npm test
+  # qa:
+  #   requires: [~commit]
+  #   steps:
+  #     - install: npm install
+  #     - test: npm test
+  # betaskope:
+  #   requires: [~commit]
+  #   steps:
+  #     - install: npm install
+  #     - test: npm test
+  # prod:
+  #   requires: [~commit]
+  #   steps:
+  #     - install: npm install
+  #     - test: npm test
+  #     requires: [~commit]
+
 
 
   # We define another Job called "publish". In this stage of the pipeline, we intend
