@@ -39,7 +39,7 @@ jobs:
       - install: npm install
       - test: npm test
 jenkins:
-      enabled: EXECUTOR_JENKINS_ENABLED
+      enabled: EXECUTOR_JENKINS_DISABLED
       options:
         jenkins:
             host: http://jenkins02.betaskope.local
@@ -48,7 +48,7 @@ jenkins:
             # Jenkins password/token used for authenticating jenkins requests
             password: Netskope@2141
             # Node labels of Jenkins slaves
-            # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL      
+            # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL
   # qa:
   #   requires: [~commit]
   #   steps:
