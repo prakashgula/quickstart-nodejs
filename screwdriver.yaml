@@ -94,7 +94,7 @@ jobs:
 #       host: http://jenkins02.betaskope.local
 #       port: 8080
 #       username: pgula
-#       password: Netskope@2141
+#       password: xxxxx
             # Jenkins password/token used for authenticating jenkins requests
 
             # Node labels of Jenkins slaves
