@@ -40,7 +40,7 @@ jobs:
       - test: npm test
 
   qa:
-    requires: sync_repo
+    # requires: sync_repo
     steps:
       - install: npm install
       - test: npm test
