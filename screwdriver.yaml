@@ -99,3 +99,14 @@ jobs:
 
             # Node labels of Jenkins slaves
             # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL
+
+settings:
+    slack:
+        channels:
+            - testscrewdriver
+        statuses:
+            - SUCCESS
+            - FAILURE
+            - ABORTED
+            - QUEUED
+            - RUNNING
