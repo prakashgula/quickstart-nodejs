@@ -28,4 +28,3 @@ $ npm install
 ```
 $ npm test
 ```
-
