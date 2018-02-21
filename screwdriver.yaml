@@ -38,17 +38,7 @@ jobs:
     steps:
       - install: npm install
       - test: npm test
-jenkins:
-      enabled: EXECUTOR_JENKINS_DISABLED
-      options:
-        jenkins:
-            host: http://jenkins02.betaskope.local
-            port: 8080
-            username: pgula
-            # Jenkins password/token used for authenticating jenkins requests
-            password: Netskope@2141
-            # Node labels of Jenkins slaves
-            # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL
+
   # qa:
   #   requires: [~commit]
   #   steps:
@@ -97,3 +87,15 @@ jenkins:
   #     # in the build as an environment variable with the same name
   #     - NPM_TOKEN
 #End commenting - Prakash
+
+jenkins:
+      enabled: EXECUTOR_JENKINS_DISABLED
+      options:
+        jenkins:
+            host: http://jenkins02.betaskope.local
+            port: 8080
+            username: pgula
+            # Jenkins password/token used for authenticating jenkins requests
+            password: Netskope@2141
+            # Node labels of Jenkins slaves
+            # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL
