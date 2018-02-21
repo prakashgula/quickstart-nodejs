@@ -34,6 +34,7 @@ jobs:
       # NPM reference document - https://docs.npmjs.com/cli/test
       - test: npm test
     dev:
+      requires: [~commit]
       jenkins:
         host: http://jenkins02.betaskope.local
         port: 8080
