@@ -34,23 +34,23 @@ jobs:
       # NPM reference document - https://docs.npmjs.com/cli/test
       - test: npm test
   dev:
-    requires: [~commit]
+    requires: sync_repo
     steps:
       - install: npm install
       - test: npm test
 
   qa:
-    requires: [~commit]
+    requires: dev
     steps:
       - install: npm install
       - test: npm test
   betaskope:
-    requires: [~commit]
+    requires: qa
     steps:
       - install: npm install
       - test: npm test
   prod:
-    requires: [~commit]
+    requires: betaskope
     steps:
       - install: npm install
       - test: npm test
