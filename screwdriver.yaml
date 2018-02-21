@@ -40,17 +40,17 @@ jobs:
       - test: npm test
 
   qa:
-    requires: dev
+    requires: sync_repo
     steps:
       - install: npm install
       - test: npm test
   betaskope:
-    requires: qa
+    requires: sync_repo
     steps:
       - install: npm install
       - test: npm test
   prod:
-    requires: [betaskope,qa]
+    requires: [dev,qa,betaskope]
     steps:
       - install: npm install
       - test: npm test
