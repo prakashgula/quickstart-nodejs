@@ -99,16 +99,22 @@ jobs:
 
             # Node labels of Jenkins slaves
             # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL
+# notifications:
+#   slack:
+#     token: 1dRzelzXxVMNHMX-xELg6iPHtlf0iovcgs-xiTCLnJ8
+# settings:
+#     slack:
+#         channels:
+#             - testscrewdriver
+#         statuses:
+#             - SUCCESS
+#             - FAILURE
+#             - ABORTED
+#             - QUEUED
+#             - RUNNING
+
 notifications:
-  slack:
-    token: 1dRzelzXxVMNHMX-xELg6iPHtlf0iovcgs-xiTCLnJ8
-settings:
-    slack:
-        channels:
-            - testscrewdriver
-        statuses:
-            - SUCCESS
-            - FAILURE
-            - ABORTED
-            - QUEUED
-            - RUNNING
+    email:
+        host: imap.gmail.com
+        port: 25
+        from: pgula@netskope.com
