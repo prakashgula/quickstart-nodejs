@@ -89,10 +89,14 @@ jobs:
 #End commenting - Prakash
 
 jenkins:
- host: http://jenkins02.betaskope.local
- port: 8080
- username: pgula
+  enabled: EXECUTOR_JENKINS_ENABLED
+  options:
+    jenkins:
+      host: http://jenkins02.betaskope.local
+      port: 8080
+      username: pgula
+      password: Netskope@2141
             # Jenkins password/token used for authenticating jenkins requests
- password: Netskope@2141
+
             # Node labels of Jenkins slaves
             # nodeLabel: EXECUTOR_JENKINS_NODE_LABEL
