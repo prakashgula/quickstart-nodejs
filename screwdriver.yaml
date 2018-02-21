@@ -54,7 +54,6 @@ jobs:
     steps:
       - install: npm install
       - test: npm test
-      requires: [~commit]
 
 
 
