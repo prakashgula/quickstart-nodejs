@@ -32,28 +32,28 @@ jobs:
       - install: npm install
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
-      - test: npm test
+      # - test: npm test
   dev:
     requires: sync_repo
     steps:
       - install: npm install
-      - test: npm test
+      # - test: npm test
 
   qa:
     # requires: sync_repo
     steps:
       - install: npm install
-      - test: npm test
+      # - test: npm test
   betaskope:
     requires: sync_repo
     steps:
       - install: npm install
-      - test: npm test
+      # - test: npm test
   prod:
-    requires: [~dev,~betaskope]
+    requires: [betaskope]
     steps:
       - install: npm install
-      - test: npm test
+      # - test: npm test
 
 
 
