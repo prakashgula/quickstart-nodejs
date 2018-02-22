@@ -50,7 +50,7 @@ jobs:
       - install: npm install
       - test: npm test
   prod:
-    requires: [~dev, ~betaskope]
+    requires: [~betaskope]
     steps:
       - install: npm install
       - test: npm test
