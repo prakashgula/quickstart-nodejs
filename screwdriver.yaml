@@ -38,19 +38,18 @@ jobs:
     steps:
       - install: npm install
       # - test: npm test
-
   qa:
-    # requires: sync_repo
+    requires: dev
     steps:
       - install: npm install
       # - test: npm test
   betaskope:
-    requires: sync_repo
+    requires: qa
     steps:
       - install: npm install
       # - test: npm test
   prod:
-    requires: [~sd@2:dev,~sd@2:betaskope]
+    requires: [~sd@2:qa,~sd@2:betaskope]
     steps:
       - install: npm install
       # - test: npm test
