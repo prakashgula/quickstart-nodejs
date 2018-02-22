@@ -43,8 +43,13 @@ jobs:
     steps:
       - install: npm install
       # - test: npm test
+  staging:
+    requires: dev
+    steps:
+      - install: npm install
+
   betaskope:
-    requires: qa
+    requires: staging
     steps:
       - install: npm install
       # - test: npm test
