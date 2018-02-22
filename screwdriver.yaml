@@ -29,34 +29,34 @@ jobs:
     steps:
       # Our "install" step is first in the list. It installs your NodeJS dependencies
       # NPM reference document - https://docs.npmjs.com/cli/install
-      - install: npm install
+      - install: npm -version
       # The next step is "test". It tests your NodeJS package
       # NPM reference document - https://docs.npmjs.com/cli/test
       # - test: npm test
   dev:
     requires: sync_repo
     steps:
-      - install: npm install
+      - install: npm -version
       # - test: npm test
   qa:
     requires: dev
     steps:
-      - install: npm install
+      - install: npm -version
       # - test: npm test
   staging:
     requires: dev
     steps:
-      - install: npm install
+      - install: npm -version
 
   betaskope:
     requires: staging
     steps:
-      - install: npm install
+      - install: npm -version
       # - test: npm test
   prod:
     requires: [~sd@2:qa,~sd@2:betaskope]
     steps:
-      - install: npm install
+      - install: npm -version
       # - test: npm test
 
 
