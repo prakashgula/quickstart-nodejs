@@ -84,14 +84,14 @@ jobs:
   #     - NPM_TOKEN
 #End commenting - Prakash
 
-# jenkins:
-#   enabled: EXECUTOR_JENKINS_ENABLED
-  # options:
-  #   jenkins:
-  #     host: http://jenkins02.betaskope.local
-  #     port: 8080
-  #     username: pgula
-  #     password: Netskope@2141
+jenkins:
+  # enabled: EXECUTOR_JENKINS_ENABLED
+  options:
+    jenkins:
+      host: http://jenkins02.betaskope.local
+      port: 8080
+      username: pgula
+      password: Netskope@2141
             # Jenkins password/token used for authenticating jenkins requests
 
             # Node labels of Jenkins slaves
