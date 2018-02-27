@@ -110,8 +110,8 @@ jobs:
 #             - QUEUED
 #             - RUNNING
 
-notifications:
-    email:
-        host: imap.gmail.com
-        port: 25
-        from: pgula@netskope.com
+# notifications:
+#     email:
+#         host: imap.gmail.com
+#         port: 25
+#         from: pgula@netskope.com
