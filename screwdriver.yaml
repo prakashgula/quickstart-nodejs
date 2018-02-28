@@ -40,7 +40,7 @@ jobs:
   c2:
     requires: sync_repo
     steps:
-      - install: npm -version;sleep 30
+      - install: npm -version;sleep 120
       # - test: npm test
   c3:
     requires: [c1,c2]
